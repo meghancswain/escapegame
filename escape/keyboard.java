@@ -1,40 +1,102 @@
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import javax.awt.*;
+import javax.swing.ImageIcon;
 
 
-/**
- * Write a description of class keyboard here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class keyboard
 {
-    /** description of instance variable x (add comment for each instance variable) */
-    private int x;
+	//public static final int SPEED = 2;
 
-    /**
-     * Default constructor for objects of class keyboard
-     */
-    public keyboard()
-    {
-        // initialise instance variables
-        x = 0;
-    }
+	private int dx, //velocity x
+				dy, //velocity y
+				x,  //x position
+				y;  //y position
 
-    /**
-     * An example of a method - replace this comment with your own
-     *    that describes the operation of the method
-     *
-     * @pre        preconditions for the method
-     *            (what the method assumes about the method's parameters and class's state)
-     * @post    postconditions for the method
-     *            (what the method guarantees upon completion)
-     * @param    y    description of parameter y
-     * @return    description of the return value
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x+y;
-    }
+	private Image sprite;
 
-}
+	public keyboard()
+	{
+		//ImageIcon image = new ImageIcon("xxxx.jpg");
+		//sprite = image.getImage();
+		x = 0;
+		y = 750;
+
+	}
+
+	/**
+	* changes the coordinates of the sprite
+	*/
+	public void move()
+	{
+		x += dx;
+		y += dy;
+
+	} //end of move
+
+	public int getX()
+	{
+		return x;
+	} //end of getX
+
+	public int getY()
+	{
+		return y;
+	} //end of getY
+
+	public Image getImage()
+	{
+		return sprite;
+	} //end of getImage
+
+	public void keyPressed(KeyEvent e)
+	{
+		int key = e.getKeyCode();
+
+		if (key == KeyEvent.VK_LEFT)
+		{
+			dx = -1;
+		}
+		if (key == KeyEvent.VK_RIGHT)
+		{
+			dx = 1;
+		}
+		if (key == KeyEvent.VK_UP)
+		{
+			dy = -1;
+		}
+		if (key == KeyEvent.VK_DOWN)
+		{
+			dy = 1;
+		}
+
+	} //end of keyPressed
+
+
+	public void keyReleased(KeyEvent e)
+	{
+
+		int key = e.getKeyCode();
+
+		if (key == KeyEvent.VK_LEFT)
+		{
+			dx = 0;
+		}
+		if (key == KeyEvent.VK_RIGHT)
+		{
+			dx = 0;
+		}
+		if (key == KeyEvent.VK_UP)
+		{
+			dy = 0;
+		}
+		if (key == KeyEvent.VK_DOWN)
+		{
+			dy = 0;
+		}
+
+	} //end of keyReleased
+
+
+
+}// end of keyboard class
