@@ -15,7 +15,7 @@ public class keyboard
 
 	public keyboard()
 	{
-		ImageIcon image = new ImageIcon("images\\bunny.PNG");
+		ImageIcon image = new ImageIcon("images\\molang.PNG");
 		sprite = image.getImage();
 		x = 0;
 		y = 750;
