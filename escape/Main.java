@@ -17,10 +17,21 @@ public static void main(String[]args)
 	setSize (APPLET_WIDTH, APPLET_HEIGHT);
 
 
-	Background background = new Background();
+public void paint(Graphics page) {
 
-	background.drawBackground();
+        Image pic = new Image("//images.Road");
+        page.drawImage(pic.getImage(), 0, 0, null);
+    }
 
+	//Background background = new Background();
+
+	//background.drawBackground();
+
+
+traffic street = new traffic();
+
+
+street.add();
 
 
 

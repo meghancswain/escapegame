@@ -10,10 +10,10 @@ import java.util.*;
 public class Background
 {
 
-public void drawBackground(Graphics page) {
+public void paint(Graphics page) {
 
-        ImageIcon pic = new ImageIcon("//images.Road");
-        page.drawImage(pic.getImage(), 0, 0, this);
+        Image pic = new Image("//images.Road");
+        page.drawImage(pic.getImage(), 0, 0, null);
     }
 
 
