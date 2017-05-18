@@ -21,8 +21,8 @@ public class character
 	{
 		ImageIcon image = new ImageIcon("images\\molang.PNG");
 		sprite = image.getImage();
-		x = 50;
-		y = 350;
+		x = 350;
+		y = 50;
 	}
 
 	/**
