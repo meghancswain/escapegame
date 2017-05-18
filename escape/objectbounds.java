@@ -1,3 +1,5 @@
+//Kathy Zhou
+
 import java.awt.Rectangle;
 import javax.swing.ImageIcon;
 

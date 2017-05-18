@@ -1,10 +1,12 @@
+//Kathy Zhou
+
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.Image;
 import javax.swing.ImageIcon;
 
 
-public class keyboard
+public class character
 {
 	private int dx, //change in x position
 				dy, //change in y position
@@ -13,14 +15,48 @@ public class keyboard
 
 	private Image sprite;
 
-	public keyboard()
+	private int lives = 5;
+
+	public character()
 	{
 		ImageIcon image = new ImageIcon("images\\molang.PNG");
 		sprite = image.getImage();
-		x = 0;
-		y = 750;
-
+		x = 50;
+		y = 350;
 	}
+
+	/**
+	* adds / updates lives of characters
+	*/
+	public void life(boolean death, boolean newlevel)
+	{
+		//if the user dies, take away a life
+		if (death == true)
+		{
+			lives--;
+		}
+
+		//adds a life if it is a new level
+		//adds only if the user does not already have 5 lives
+		if (newlevel == true)
+		{
+			if (lives < 5)
+			{
+				lives++;
+			}
+		}
+
+	}//end of life
+
+	/**
+	* returns the number of lives of the character
+	*/
+	public int getlife()
+	{
+		return lives;
+
+	}//end of getlife
+
 
 	/**
 	* changes the coordinates of the sprite
@@ -134,4 +170,4 @@ public class keyboard
 
 
 
-}// end of keyboard class
+}// end of character class
