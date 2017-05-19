@@ -21,7 +21,6 @@ public class Controls extends JPanel implements ActionListener
      */
     public Controls()
     {
-        setFocusable(true);
         addKeyListener(new Adapter());
         character = new character();
         timer = new Timer(wait, this);
@@ -40,19 +39,33 @@ public class Controls extends JPanel implements ActionListener
 
     }
     */
+
+
     public void paintComponent(Graphics page)
     {
         super.paintComponent(page);
         //draw(page);
+        Graphics2D page2D = (Graphics2D) page;
         page.drawImage(character.getImage(), character.getX(), character.getY(), this);
         for (car vehicle: street.getTrafficList())
         {
             page.drawImage(vehicle.getCarImage(), vehicle.getXPos(), vehicle.getYPos(), this);
         }
 
-
-
     }
+
+	//Moving cars
+	public void paintComponent(Graphics page)
+	{
+		super.paintComponent(page);
+		for (car vehicle: street.getTrafficList())
+		{
+			page.drawImage(vehicle.getCarImage(), vehicle.getXPos(), vehicle.getYPos(), this);
+		}
+	}
+
+
+
 
     /**
      * draw method to draw the image of the character
