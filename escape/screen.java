@@ -4,10 +4,10 @@
 public class screen
 {
 
-public screen
-{
+	public screen
+	{
 
 
 
-}//ends constructor
+	}//ends constructor
 }//ends screen
