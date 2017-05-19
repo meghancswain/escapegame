@@ -1,1 +1,2 @@
 Mouse Listener: http://www.realapplets.com/tutorial/mouseclickexample.html
+JPanel: http://stackoverflow.com/questions/299495/how-to-add-an-image-to-a-jpanel
