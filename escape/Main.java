@@ -16,7 +16,7 @@ public static void main(String[]args)
 
 	setSize (APPLET_WIDTH, APPLET_HEIGHT);
 
-
+}
 public void paint(Graphics page) {
 
         Image pic = new Image("//images.Road");
